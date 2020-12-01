@@ -40,7 +40,7 @@ Strech Goals:
 - Gamify?
 - add audio stinger?
 ## **Known Bugs**
-There are no known bugs
+- when entering a new prompt, any phrase that has '<' followed directly by more characters does not print properly to the DOM. '<' and '< something' appear without issue.
 ## **Technology Used**
 * HTML
 * JavaScript
