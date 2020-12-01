@@ -14,7 +14,7 @@ $(document).ready(function() {
   });
   let progress = `${(game.turnsTaken) +2} / ${game.prompt1.length}`;
   $("#progress").text(progress);
-  $("form").submit(function(event) {
+  $("#input").submit(function(event) {
     event.preventDefault();
     game.userInput.push($("#inputField").val());
     if (game.checkAnswer() === "correct") {
@@ -67,4 +67,4 @@ $(document).ready(function() {
     $("#promptOut").css("filter","blur(0)");
     Timer();
   });
-});
+})
