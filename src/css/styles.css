@@ -19,8 +19,23 @@ background-color: blanchedalmond;
   text-align: center;
 }
 
+.single-char {
+  font-size: 2rem;
+}
+
 .incorrect {
-  font-weight: 700;
   color: crimson;
   text-decoration: underline;
+}
+
+.correct {
+  color: forestgreen;
+}
+
+#promptOut {
+  font-size: 2rem;
+}
+
+#visual {
+  font-size: 2rem;
 }

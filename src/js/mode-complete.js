@@ -1,5 +1,3 @@
-import { timers } from "jquery";
-
 export class Complete {
   constructor() {
     this.userInput = [];
@@ -16,7 +14,7 @@ export class Complete {
       "thisArray.push",
       "setTimeout(function(){},5000)",
       "return result"
-    ]
+    ];
     this.turnsTaken = 0;
   }
   checkAnswer() {
