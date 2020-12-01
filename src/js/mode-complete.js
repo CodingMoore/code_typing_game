@@ -22,6 +22,8 @@ export class Complete {
     // add one to the number of turnsTaken:
     }
   }
+  addPrompt(input) {
+    this.prompt1.push(input);
 }
 
 /*
