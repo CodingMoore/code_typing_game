@@ -18,3 +18,24 @@ background-color: blanchedalmond;
   border-radius: 35%;
   text-align: center;
 }
+
+.single-char {
+  font-size: 2rem;
+}
+
+.incorrect {
+  color: crimson;
+  text-decoration: underline;
+}
+
+.correct {
+  color: forestgreen;
+}
+
+#promptOut {
+  font-size: 2rem;
+}
+
+#visual {
+  font-size: 2rem;
+}

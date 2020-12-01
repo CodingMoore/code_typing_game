@@ -3,11 +3,14 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { Complete } from './js/mode-complete.js';
-
+import { validater } from './js/validate-char.js';
 
 $(document).ready(function() {
   let game = new Complete();
-  $("#promptOut").text(game.prompt1[0]); 
+  $("#promptOut").text(game.prompt1[0]);
+  $("#inputField").on("input", function() {
+    $("#visual").html(validater($("#inputField").val(), game.prompt1[game.turnsTaken]));
+  });
   $("form").submit(function(event) {
     event.preventDefault();
     game.userInput.push($("#inputField").val());
@@ -26,6 +29,5 @@ $(document).ready(function() {
         $("#incorrect").hide();
       } , 1000);
     }
-
   });
 });

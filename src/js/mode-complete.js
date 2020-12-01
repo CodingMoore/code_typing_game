@@ -1,5 +1,3 @@
-import { timers } from "jquery";
-
 export class Complete {
   constructor() {
     this.userInput = [];
@@ -9,6 +7,13 @@ export class Complete {
       "<",
       "/",
       "="
+    ];
+    this.prompt2 = [
+      "function() {",
+      "Array.prototype",
+      "thisArray.push",
+      "setTimeout(function(){},5000)",
+      "return result"
     ];
     this.turnsTaken = 0;
   }
