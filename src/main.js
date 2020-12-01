@@ -10,19 +10,24 @@ import { Complete } from './js/mode-complete.js';
 //   }, 3000);
 // }
 
-function Timer(event) {
-  event.preventDefault();
-  setTimeout(function() {
-    $(".gameOver").show();
-  }, 3000);
-}
-
-$("#gamestart").click(Timer());
 
 $(document).ready(function() {
+  function Timer() {
+    setTimeout(function() {
+      $(".gameOver").show();
+      $(".card-header").html("<span>" + "Score" + "</span>")
+    }, 3000);
+  }
+  
+  $("#gamestart").click(function() {
+    // $("#one").show();
+    $("#promptOut").css("filter","blur(0)");
+    Timer();
+  });
+
   let game = new Complete();
   $("#promptOut").text(game.prompt1[0]); 
-  $("form").submit(function(event) {
+  $("#add").submit(function(event) {
     event.preventDefault();
     game.userInput.push($("#inputField").val());
     if (game.checkAnswer() === "correct") {
@@ -41,4 +46,16 @@ $(document).ready(function() {
       } , 1000);
     }
   });
+  $("#promptForm").submit(function(e) {
+    e.preventDefault();
+    game.addPrompt($("#userPrompt").val());
+    let arr = game.prompt1;
+    console.log(arr);
+    makeTable(arr);
+  });
+  function makeTable(arr) {
+    for (var key in arr) {
+      $('table').append('<tr><td>' + arr[key] + '</td></tr>');
+    }
+  }
 });

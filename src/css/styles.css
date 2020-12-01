@@ -1,3 +1,24 @@
+#promptOut {
+  /* display: none; */
+  filter: blur(2px);
+}
+
+.addPrompt {
+  text-align: center;
+}
+
+.newPrompts {
+  float: right;
+  margin: 20px;
+  border: green, 5px;
+  border-radius: 10%;
+}
+
+#two {
+  margin: auto;
+  width: auto;
+}
+
 .gameOver {
   display:none;
 }

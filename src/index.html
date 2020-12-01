@@ -4,35 +4,55 @@
   <title>Code Typing Game</title>
 </head>
 <body>
-  <div class="container">
-    <h1 id="header">Code Typing Game</h1>
-    <div id="instruct">
-      Match the prompt and press submit.
-    </div>
-    <div id="promptBox">
-      <p id="promptText">Prompt!</p>
-      <span id="promptOut"></span>
-    </div>
-    <div id="correct">
-      <p>You can type!</p>
-    </div>
-    <div id="incorrect">
-      <p>Not what we were looking for.</p>
-    </div>
-    <form id="add">
-      <div class="form-group">
-        <label for="inputField">Input</label>
-        <input id="inputField" class="form-control" type="text">
+  <div id="x">
+    <div class="container">
+      <h1 id="header">Code Typing Game</h1>
+      <div id="instruct">
+        Match the prompt and press submit.
       </div>
-      <button type="submit" id="subButton" onclick="Timer()">Submit!</button>
-    </form>
-    <br>
-    <div class="gamestart">
-      <button type="submit" id="gamestart">Start game</button>
+      <div id="promptBox">
+        <p id="promptText">Prompt!</p>
+        <span id="promptOut"></span>
+      </div>
+      <div id="correct">
+        <p>You can type!</p>
+      </div>
+      <div id="incorrect">
+        <p>Not what we were looking for.</p>
+      </div>
+      <form id="add">
+        <div class="form-group">
+          <label for="inputField">Input</label>
+          <input id="inputField" class="form-control" type="text">
+        </div>
+        <button type="submit" id="subButton">Submit!</button>
+      </form>
+      <br>
     </div>
-    <div class="gameOver">
-      <p>something goes here</p>
-    </div>
+  </div>  
+<div class="container" id="two">
+  <div class="gamestart">
+    <button type="submit" id="gamestart">Start game</button>
+  </div>
+  <div class="gameOver">
+    <div class="card-header"></div>
+    <div class="card-body"></div>
+    <div class="card-footer"></div>
+  </div>
+</div>
+<div id="promptTable" class="container">
+  <form id="promptForm">
+    <label for="userPrompt">Add your own prompts</label>
+    <input id="userPrompt" type="text" placeholder="Enter prompt here" required>
+    <button type="button" class="addPrompt" for="userPrompt">Add Prompt</label>
+  </form>
+</div>
+  <div class="newPrompts">
+    <table>
+      <tbody>
+        <th id="table">Prompts</th>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>

@@ -24,6 +24,7 @@ export class Complete {
   }
   addPrompt(input) {
     this.prompt1.push(input);
+  }
 }
 
 /*
