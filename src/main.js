@@ -4,6 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { Complete } from './js/mode-complete.js';
 
+// function setTimeout(onSubmit, 3000) {
+//     onSubmit.disabled = true;
+//     $(".gameOver").show();
+//   }, 3000);
+// }
+
+function Timer(event) {
+  event.preventDefault();
+  setTimeout(function() {
+    $(".gameOver").show();
+  }, 3000);
+}
+
+$("#gamestart").click(Timer());
 
 $(document).ready(function() {
   let game = new Complete();
@@ -26,6 +40,5 @@ $(document).ready(function() {
         $("#incorrect").hide();
       } , 1000);
     }
-
   });
 });

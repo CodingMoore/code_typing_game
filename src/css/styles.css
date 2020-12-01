@@ -1,3 +1,7 @@
+.gameOver {
+  display:none;
+}
+
 #subButton {
 background-color: blanchedalmond;
 }

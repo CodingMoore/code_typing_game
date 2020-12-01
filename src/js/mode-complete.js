@@ -1,4 +1,4 @@
-import { timers } from "jquery";
+// import { timers } from "jquery";
 
 export class Complete {
   constructor() {
