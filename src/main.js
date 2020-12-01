@@ -4,13 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { Complete } from './js/mode-complete.js';
 
-// function setTimeout(onSubmit, 3000) {
-//     onSubmit.disabled = true;
-//     $(".gameOver").show();
-//   }, 3000);
-// }
-
-
 $(document).ready(function() {
   function Timer() {
     setTimeout(function() {
@@ -20,7 +13,6 @@ $(document).ready(function() {
   }
   
   $("#gamestart").click(function() {
-    // $("#one").show();
     $("#promptOut").css("filter","blur(0)");
     Timer();
   });
@@ -57,7 +49,7 @@ $(document).ready(function() {
   });
   function makeTable(arr) {
     $('.newPrompts').text("");
-    for (var key in arr) {
+    for (let key in arr) {
       $('.newPrompts').append('<tr><td>' + arr[key] + '</td></tr>');
     }
   }
