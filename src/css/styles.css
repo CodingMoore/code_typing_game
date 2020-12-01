@@ -67,8 +67,8 @@ background-color: blanchedalmond;
 }
 
 @keyframes animatetop {
-  from {top: -300px; opcaity: 0}
-  to {top: 0; opcatiy: 1}
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
 #promptOut {
   /* display: none; */

@@ -13,6 +13,7 @@ $(document).ready(function() {
     $("#visual").html(validater($("#inputField").val(), game.prompt1[game.turnsTaken]));
   });
   let progress = `${(game.turnsTaken) +2} / ${game.prompt1.length}`;
+  $("#progress").text(progress);
   $("form").submit(function(event) {
     event.preventDefault();
     game.userInput.push($("#inputField").val());
@@ -49,7 +50,7 @@ $(document).ready(function() {
   function Timer() {
     setTimeout(function() {
       $(".modal").show();
-      $(".card-header").html("<span>" + "Score" + "</span>")
+      $(".card-header").html("<span>" + "Score" + "</span>");
     }, 3000);
   }
 
