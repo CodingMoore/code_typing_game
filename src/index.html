@@ -34,10 +34,13 @@
   <div class="gamestart">
     <button type="submit" id="gamestart">Start game</button>
   </div>
-  <div class="gameOver">
-    <div class="card-header"></div>
-    <div class="card-body"></div>
-    <div class="card-footer"></div>
+  <div class ="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="card-header"></div>
+      <div class="card-body"></div>
+      <div class="card-footer"></div>
+    </div>
   </div>
 </div>
 <div id="promptTable" class="container">
@@ -47,11 +50,13 @@
     <button type="submit" class="addPrompt" for="userPrompt">Add Prompt</label>
   </form>
 </div>
-  <div>
+<div>
+  <div class="container">
     <table class="table">
-      <th style="float:right">Prompts</th>
+      <th>Prompts</th>
       <tr  class="newPrompts"></tr>
     </table>
   </div>
+</div>
 </body>
 </html>

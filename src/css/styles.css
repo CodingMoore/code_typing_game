@@ -8,7 +8,7 @@
 }
 
 .newPrompts {
-  float: right;
+  float: left;
   margin: 20px;
   border: green, 5px;
   border-radius: 10%;
@@ -42,4 +42,27 @@ background-color: blanchedalmond;
   color: yellowgreen;
   border-radius: 35%;
   text-align: center;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  height: auto;
+}
+
+.modal-content {
+  margin: 15%;
+  padding: 20px;
+  width: 80%;
 }

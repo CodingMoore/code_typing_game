@@ -7,11 +7,16 @@ import { Complete } from './js/mode-complete.js';
 $(document).ready(function() {
   function Timer() {
     setTimeout(function() {
-      $(".gameOver").show();
+      $(".modal").show();
       $(".card-header").html("<span>" + "Score" + "</span>")
     }, 3000);
   }
-  
+
+$(".close").click(function() {
+  console.log("click");
+  $(".modal").css("display", "none");
+});
+
   $("#gamestart").click(function() {
     $("#promptOut").css("filter","blur(0)");
     Timer();
