@@ -33,5 +33,4 @@ $(document).ready(function() {
 
   });
 });
-
-//Object.keys.length(game.prompt1
+//here is a brand new comment
