@@ -53,7 +53,7 @@ $(document).ready(function() {
   function makeTable(arr) {
     $('.newPrompts').text("");
     for (let key in arr) {
-      $('.newPrompts').append('<tr><td>' +  arr[key] + '</td></tr>');
+      $('.newPrompts').append('<tr><td>' + arr[key] + '</td></tr>');
     }
   }
 });
