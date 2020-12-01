@@ -33,14 +33,6 @@ $(document).ready(function() {
       } , 1000);
     }
   });
-  $("#promptForm").submit(function(e) {
-    e.preventDefault();
-    game.addPrompt($("#userPrompt").val());
-    let arr = game.prompt1;
-    makeTable(arr);
-    $("#userPrompt").val("");
-
-  });
   function makeTable(arr) {
     $('.newPrompts').text("");
     for (let key in arr) {
@@ -56,6 +48,19 @@ $(document).ready(function() {
 
   $(".close").click(function() {
     $(".modal").css("display", "none");
+  });
+
+  $("#gamestart").click(function() {
+    $("#promptOut").css("filter","blur(0)");
+    Timer();
+  });
+
+  $("#promptForm").submit(function(e) {
+    e.preventDefault();
+    game.addPrompt($("#userPrompt").val());
+    let arr = game.prompt1;
+    makeTable(arr);
+    $("#userPrompt").val("");
   });
 
   $("#gamestart").click(function() {
