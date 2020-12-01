@@ -46,7 +46,6 @@ $(document).ready(function() {
     e.preventDefault();
     game.addPrompt($("#userPrompt").val());
     let arr = game.prompt1;
-    console.log(arr);
     makeTable(arr);
     $("#userPrompt").val("");
 
@@ -54,7 +53,7 @@ $(document).ready(function() {
   function makeTable(arr) {
     $('.newPrompts').text("");
     for (let key in arr) {
-      $('.newPrompts').append('<tr><td>' + arr[key] + '</td></tr>');
+      $('.newPrompts').append('<tr><td>' +  arr[key] + '</td></tr>');
     }
   }
 });
