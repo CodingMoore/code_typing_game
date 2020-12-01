@@ -8,9 +8,11 @@ import { validater } from './js/validate-char.js';
 $(document).ready(function() {
   let game = new Complete();
   $("#promptOut").text(game.prompt1[0]);
+  $("#progress").text(`1/${game.prompt1.length}`);
   $("#inputField").on("input", function() {
     $("#visual").html(validater($("#inputField").val(), game.prompt1[game.turnsTaken]));
   });
+  let progress = `${(game.turnsTaken) +2} / ${game.prompt1.length}`;
   $("form").submit(function(event) {
     event.preventDefault();
     game.userInput.push($("#inputField").val());
