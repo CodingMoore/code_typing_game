@@ -1,0 +1,7 @@
+1) time trial - patrick Nick
+2) add highlight incorrect - Tyler Randel
+3) percent correct
+4) chars per/min
+5) show question 2 out of 10
+6) add additional prompt arrays
+7) way to select prompt array

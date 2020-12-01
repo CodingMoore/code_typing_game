@@ -1,0 +1,20 @@
+#subButton {
+background-color: blanchedalmond;
+}
+
+#correct {
+  display: none;
+  font-weight: 600; 
+  background-color: forestgreen;
+  color: ivory;
+  border-radius: 15%;
+  text-align: center;
+}
+
+#incorrect {
+  display: none;
+  background-color: crimson;
+  color: yellowgreen;
+  border-radius: 35%;
+  text-align: center;
+}
