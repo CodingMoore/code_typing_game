@@ -52,10 +52,13 @@ $(document).ready(function() {
     let arr = game.prompt1;
     console.log(arr);
     makeTable(arr);
+    $("#userPrompt").val("");
+
   });
   function makeTable(arr) {
+    $('.newPrompts').text("");
     for (var key in arr) {
-      $('table').append('<tr><td>' + arr[key] + '</td></tr>');
+      $('.newPrompts').append('<tr><td>' + arr[key] + '</td></tr>');
     }
   }
 });
