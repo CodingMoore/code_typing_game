@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { Complete } from './js/mode-complete.js';
 
+
 $(document).ready(function() {
   let game = new Complete();
   $("#promptOut").text(game.prompt1[0]);
