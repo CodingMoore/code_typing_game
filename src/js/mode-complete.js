@@ -10,6 +10,13 @@ export class Complete {
       "/",
       "="
     ];
+    this.prompt2 = [
+      "function() {",
+      "Array.prototype",
+      "thisArray.push",
+      "setTimeout(function(){},5000)",
+      "return result"
+    ]
     this.turnsTaken = 0;
   }
   checkAnswer() {

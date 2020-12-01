@@ -18,3 +18,9 @@ background-color: blanchedalmond;
   border-radius: 35%;
   text-align: center;
 }
+
+.incorrect {
+  font-weight: 700;
+  color: crimson;
+  text-decoration: underline;
+}
