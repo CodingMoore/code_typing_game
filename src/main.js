@@ -12,10 +12,9 @@ $(document).ready(function() {
     }, 3000);
   }
 
-$(".close").click(function() {
-  console.log("click");
-  $(".modal").css("display", "none");
-});
+  $(".close").click(function() {
+    $(".modal").css("display", "none");
+  });
 
   $("#gamestart").click(function() {
     $("#promptOut").css("filter","blur(0)");
