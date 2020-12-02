@@ -51,7 +51,20 @@
   </div>
   <div class ="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <div class="modal-header">
+        <h1 class="modal-title">Select difficulty level:</h1>
+      </div>
+      <form id='radio' class='form-group'>
+        <div>
+          <label for='diff-1'>Flavor 1</label>
+          <input id ='diff-1' type='radio' val='0' name='diff'>
+        </div>
+        <div>
+          <label for='diff-2'>Flavor 2</label>
+          <input id = 'diff-2' type='radio' val='1' name='diff'>
+        </div>
+        <button type='submit' id='radio-form'>Choose Game</button>
+      </form>
     </div>
   </div>
 </body>

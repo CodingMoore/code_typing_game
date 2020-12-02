@@ -1,33 +1,33 @@
 export class Complete {
   constructor() {
     this.userInput = [];
-    this.prompt1 = [
+    this.prompt = [[
       "[",
       "{",
       "<",
       "/",
       "="
-    ];
-    this.prompt2 = [
+    ],
+    [
       "function() {",
       "Array.prototype",
       "thisArray.push",
       "setTimeout(function(){},5000)",
       "return result"
-    ];
+    ]];
     this.turnsTaken = 1;
   }
-  checkAnswer() {
+  checkAnswer(difficulty) {
     let count = this.turnsTaken;
-    if (this.userInput[count-1] === this.prompt1[count-1]) {
+    if (this.userInput[count-1] === this.prompt[difficulty][count-1]) {
       // this.turnsTaken ++;
       return "correct";
     } else {
       return "incorrect";
     }
   }
-  addPrompt(input) {
-    this.prompt1.push(input);
+  addPrompt(input, difficulty) {
+    this.prompt[difficulty].push(input);
   }
 }
 
