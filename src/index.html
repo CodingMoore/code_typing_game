@@ -21,14 +21,59 @@
     </div>
     <div id="visual">
     </div>
-    <form id="add">
+    <form id="input">
       <div class="form-group">
         <label for="inputField">Input</label>
         <input id="inputField" class="form-control" type="text">
       </div>
       <button type="submit" id="subButton">Submit!</button>
     </form>
-  <div id="progress">
+  <div id="progress"></div>
+  <div class="container" id="two">
+    <div class="gamestart">
+      <button type="submit" id="gamestart">Start game</button>
+    </div>
+  </div>
+<div id="promptTable" class="container">
+  <form id="promptForm">
+    <label for="userPrompt">Add your own prompts</label>
+    <input id="userPrompt" type="text" placeholder="Enter prompt here" required>
+    <button type="submit" class="addPrompt" for="userPrompt">Add Prompt</label>
+  </form>
+</div>
+  <div>
+    <div class="container">
+      <table class="table">
+        <th>Prompts</th>
+        <tr  class="newPrompts"></tr>
+      </table>
+    </div>
+  </div>
+  <div id='start' class ="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Select difficulty level:</h1>
+      </div>
+      <form id='radio' class='form-group'>
+        <div>
+          <label for='diff-1'>Flavor 1</label>
+          <input id ='diff-1' type='radio' value='0' name='diff'>
+        </div>
+        <div>
+          <label for='diff-2'>Flavor 2</label>
+          <input id = 'diff-2' type='radio' value='1' name='diff'>
+        </div>
+        <button type='submit' id='radio-form'>Choose Game</button>
+      </form>
+    </div>
+  </div>
+  <div id ='gameOver' class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Game Over</h1>
+      </div>
+      <input type="button" value="Refresh Page" onClick="location.href=location.href"></input>
+    </div>
   </div>
 </body>
 </html>

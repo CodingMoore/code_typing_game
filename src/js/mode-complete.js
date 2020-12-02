@@ -1,31 +1,130 @@
 export class Complete {
   constructor() {
     this.userInput = [];
-    this.prompt1 = [
+    this.prompt = [
+      [
+        "[",
+        "{",
+        "<",
+        "/",
+        "="
+      ],
+      [
+        "function() {",
+        "Array.prototype",
+        "thisArray.push",
+        "setTimeout(function(){},5000)",
+        "return result"
+      ],
+      [
+        "[",
+        "{",
+        "<",
+        "/",
+        "=",
+        ">",
+        "]",
+        ",",
+        "@keys,",
+        "%",
+        "!",
+        "` some text `,",
+        "~",
+        "*",
+        "&emdash;",
+        "{}",
+        "[]",
+        "()",
+        "$",
+        "$()",
+        "$(' ')",
+        "${}",
+        "function()",
+        "function",
+        "this.here",
+        "VeryNested.Object.keys.instance.locator",
+        "Some[more]bracket.and.dot[notation]",
+        "<>",
+        "()",
+        "^",
+        "#",
+        "@",
+        "@mailto:",
+        "class",
+        "id",
+        "div.class-name-here",
+        "div#id-name-here",
+        "div>p+ul>5*li",
+        "div>h2+3*p",
+        "div>h3+p+ul>6*li",
+        "&amp;", // <-- Begin html named codes section
+        "&bull;",
+        "&deg;",
+        "&sdot;",
+        "&infin;",
+        "&mdash;",
+        "&euro;",
+        "&pound;",
+        "&yen;",
+        "&cent;",
+        "&copy;",
+        "&reg;",
+        "&trade;",
+        "&alpha;", // <-- Begin greek
+        "&beta;",
+        "&gamma;",
+        "&lambda;",
+        "&omicron;",
+        "&Alpha;",
+        "&Beta;",
+        "&Gamma;",
+        "&Delta;",
+        "&Omicron;",
+        "&Pi;",
+        "&Upsilon;",
+        "&Chi;",
+        "&Psi;",
+        "&Omega;",
+      ]
+  
+  ];
+    this.turnsTaken = 1;
+  }
+  checkAnswer(difficulty) {
+    let count = this.turnsTaken;
+    if (this.userInput[count-1] === this.prompt[difficulty][count-1]) {
+      return "correct";
+    } else {
+      return "incorrect";
+    }
+  }
+  addPrompt(input, difficulty) {
+    this.prompt[difficulty].push(input);
+  }
+  static newGameInstance(gamesPlayed) { // gamesPlayed is a number
+    let counter = gamesPlayed++;
+    let newInstance = new Complete();
+    // change the name or some other key-value on this new instance to signify it is game 2 or game 3, and so on...
+    newInstance.gamesPlayed = counter;
+    return newInstance;
+  }
+  resetPlayer() {
+    this.turnsTaken = 1;
+    this.userInput = [];
+    this.prompt = [[
       "[",
       "{",
       "<",
       "/",
       "="
-    ];
-    this.prompt2 = [
+    ],
+    [
       "function() {",
       "Array.prototype",
       "thisArray.push",
       "setTimeout(function(){},5000)",
       "return result"
-    ];
-    this.turnsTaken = 0;
-  }
-  checkAnswer() {
-    let count = this.turnsTaken;
-    if (this.userInput[count] === this.prompt1[count]) {
-      this.turnsTaken ++;
-      return "correct";
-    } else {
-      return "incorrect";
-    // add one to the number of turnsTaken:
-    }
+    ]];
   }
   addPrompt(input) {
     this.prompt1.push(input);

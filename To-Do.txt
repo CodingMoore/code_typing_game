@@ -5,3 +5,10 @@
 5) show question 2 out of 10
 6) add additional prompt arrays
 7) way to select prompt array
+8) Start a new game button (session memory) --> an array that holds objects, where each object holds the results of one game
+9) Styling
+10) Game Mode Selector (currently game.prompt1, for example, is hard-coded everywhere) - Nick and Tyler
+11) Welcome screen
+12) Game Over screen
+13) figure out how to host this project(heroku? gh-pages?)
+14) README!!!!!!
