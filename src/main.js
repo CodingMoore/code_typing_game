@@ -10,12 +10,12 @@ $(document).ready(function() {
   $("#promptOut").text(game.prompt1[0]);
   $("#progress").text(`1/${game.prompt1.length}`);
   $("#inputField").on("input", function() {
-    $("#visual").html(validater($("#inputField").val(), game.prompt1[game.turnsTaken]));
+    $("#visual").html(validater($("#inputField").val(), game.prompt1[game.turnsTaken], game));
   });
-  let progress = `${(game.turnsTaken) +2} / ${game.prompt1.length}`;
-  $("#progress").text(progress);
   $("#input").submit(function(event) {
     event.preventDefault();
+    let progress = `${(game.turnsTaken) +2} / ${game.prompt1.length}`;
+    $("#progress").text(progress);
     game.userInput.push($("#inputField").val());
     if (game.checkAnswer() === "correct") {
       $("#correct").show();
@@ -23,6 +23,7 @@ $(document).ready(function() {
       setTimeout(function() {
         $("#correct").hide();
         $("#promptOut").text(game.prompt1[game.turnsTaken]);
+        $("#visual").html("");
       } , 1000);
     } else {
       $("#incorrect").show();
