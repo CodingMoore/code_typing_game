@@ -70,27 +70,3 @@ background-color: blanchedalmond;
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
-#promptOut {
-  /* display: none; */
-  filter: blur(2px);
-}
-
-.addPrompt {
-  text-align: center;
-}
-
-.newPrompts {
-  float: left;
-  margin: 20px;
-  border: green, 5px;
-  border-radius: 10%;
-}
-
-#two {
-  margin: auto;
-  width: auto;
-}
-
-.gameOver {
-  display:none;
-}

@@ -13,3 +13,12 @@ export function validater(input, checker) {
   }
   return colorizedContents;
 }
+// let holder;
+// function newGame() {
+//   for (let i = 0; i < 10; i++) {
+//   holder = "game" + i 
+//   return eval(holder) // What is this line doing? 
+  
+//   }
+// }
+// newGame();

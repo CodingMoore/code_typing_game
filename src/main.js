@@ -6,41 +6,53 @@ import { Complete } from './js/mode-complete.js';
 import { validater } from './js/validate-char.js';
 
 $(document).ready(function() { 
-  $(".modal").show();
+  $("#start").show();
   $('#radio').submit(function(event) {
     event.preventDefault();
-    let difficulty = $('input:radio[name=diff]:checked').value();
-    let game = new Complete();
+    let difficulty = $('input:radio[name=diff]:checked').val();
+    let game = new Complete;
+    game = Complete.newGameInstance(0); // this adds a key-value pair to the game instance AND ups it by one each time called
+    $("#inputField").focus();
     gameStart(game, difficulty);
-    
   });
   function gameStart(game, difficulty) {
+    
+    $("#visual").text("");
+    $("#inputField").val("");
+    $("#start").hide();
     $("#promptOut").text(game.prompt[difficulty][0]);
     $("#progress").text(`1/${game.prompt[difficulty].length}`);
+    // console.log(game.prompt[difficulty][game.turnsTaken - 1]);
     $("#inputField").on("input", function() {
-      $("#visual").html(validater($("#inputField").val(), game.prompt[difficulty][game.turnsTaken - 1]));
-      console.log(game.turnsTaken);
+      // console.log(`game.prompt value: ${game.prompt}`);
+      // console.log(`difficulty value: ${difficulty}`);
+      // console.log(`turns taken: ${game.turnsTaken - 1}`);
+      // console.log(`checker used very soon: ${game.prompt[difficulty][game.turnsTaken - 1]}`);
+      $("#visual").html(validater($("#inputField").val(), game.prompt[difficulty][game.turnsTaken -1]));
     });
     $("#input").submit(function(event) {
       event.preventDefault();
       game.userInput.push($("#inputField").val());
       if (game.checkAnswer(difficulty) === "correct") {
         game.turnsTaken ++;
-        $("#correct").show();
-        $("#inputField").val("");
-        setTimeout(function() {
-          $("#correct").hide();
-          $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
-          $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
-          $("#visual").html("");
-        } , 1000);
-      } else {
+        if (game.turnsTaken < game.prompt[difficulty].length) {
+          $("#correct").show();
+          $("#inputField").val("");
+          setTimeout(function() {
+            $("#correct").hide();
+            $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
+            $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
+            $("#visual").html("");
+          } , 1000);
+        } else {
+          game.resetPlayer();
+          $('#gameOver').show();
+        }
+      } else if (game.checkAnswer(difficulty) === 'incorrect') {
         $("#incorrect").show();
-        $("#inputField").val("");
         game.userInput.pop();
         setTimeout(function() {
           $("#incorrect").hide();
-          $("#visual").html("");
         } , 1000);
       }
     });
@@ -55,9 +67,7 @@ $(document).ready(function() {
     }, 3000);
   }
 
-
   $("#gamestart").click(function() {
-    $("#promptOut").css("filter","blur(0)");
     Timer();
   });
 });

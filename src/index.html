@@ -49,7 +49,7 @@
       </table>
     </div>
   </div>
-  <div class ="modal">
+  <div id='start' class ="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title">Select difficulty level:</h1>
@@ -57,14 +57,22 @@
       <form id='radio' class='form-group'>
         <div>
           <label for='diff-1'>Flavor 1</label>
-          <input id ='diff-1' type='radio' val='0' name='diff'>
+          <input id ='diff-1' type='radio' value='0' name='diff'>
         </div>
         <div>
           <label for='diff-2'>Flavor 2</label>
-          <input id = 'diff-2' type='radio' val='1' name='diff'>
+          <input id = 'diff-2' type='radio' value='1' name='diff'>
         </div>
         <button type='submit' id='radio-form'>Choose Game</button>
       </form>
+    </div>
+  </div>
+  <div id ='gameOver' class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Game Over</h1>
+      </div>
+      <input type="button" value="Refresh Page" onClick="location.href=location.href"></input>
     </div>
   </div>
 </body>
