@@ -8,21 +8,23 @@ import { validater } from './js/validate-char.js';
 $(document).ready(function() {
   let game = new Complete();
   $("#promptOut").text(game.prompt1[0]);
-  $("#progress").text(`1/${game.prompt1.length}`);
+  // $("#progress").text(`1/${game.prompt1.length}`);
   $("#inputField").on("input", function() {
-    $("#visual").html(validater($("#inputField").val(), game.prompt1[game.turnsTaken], game));
+    $("#visual").html(validater($("#inputField").val(), game.prompt1[game.turnsTaken - 1]));
+    console.log(game.turnsTaken);
   });
   $("#input").submit(function(event) {
     event.preventDefault();
-    let progress = `${(game.turnsTaken) +2} / ${game.prompt1.length}`;
-    $("#progress").text(progress);
+    // let progress = (game.turnsTaken) + "/" + game.prompt1.length;
+    // $("#progress").text(progress);
     game.userInput.push($("#inputField").val());
     if (game.checkAnswer() === "correct") {
+      game.turnsTaken ++;
       $("#correct").show();
       $("#inputField").val("");
       setTimeout(function() {
         $("#correct").hide();
-        $("#promptOut").text(game.prompt1[game.turnsTaken]);
+        $("#promptOut").text(game.prompt1[game.turnsTaken - 1]);
         $("#visual").html("");
       } , 1000);
     } else {
@@ -51,11 +53,6 @@ $(document).ready(function() {
     $(".modal").css("display", "none");
   });
 
-  $("#gamestart").click(function() {
-    $("#promptOut").css("filter","blur(0)");
-    Timer();
-  });
-
   $("#promptForm").submit(function(e) {
     e.preventDefault();
     game.addPrompt($("#userPrompt").val());
@@ -68,4 +65,4 @@ $(document).ready(function() {
     $("#promptOut").css("filter","blur(0)");
     Timer();
   });
-})
+});

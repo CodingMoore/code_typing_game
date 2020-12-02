@@ -15,11 +15,12 @@ export class Complete {
       "setTimeout(function(){},5000)",
       "return result"
     ];
-    this.turnsTaken = 0;
+    this.turnsTaken = 1;
   }
   checkAnswer() {
     let count = this.turnsTaken;
-    if (this.userInput[count] === this.prompt1[count]) {
+    if (this.userInput[count-1] === this.prompt1[count-1]) {
+      // this.turnsTaken ++;
       return "correct";
     } else {
       return "incorrect";
