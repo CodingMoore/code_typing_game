@@ -68,4 +68,4 @@ $(document).ready(function() {
     $("#promptOut").css("filter","blur(0)");
     Timer();
   });
-})
+});
