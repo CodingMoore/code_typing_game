@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <title>Code Typing Game</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+  <div class="container">
+    <h1 id="header">Code Typing Game<span class="blinker">_</span></h1>
+    <div id="promptBox">
+      <div id="promptOut"></div>
+      <div id="visual">
+      </div>
+    </div>
+    <div id="correct">
+      <p>You can type!</p>
+    </div>
+    <div id="incorrect">
+      <p>Not what we were looking for.</p>
+    </div>
+    
+    <form id="input">
+      <div class="form-group">
+        <label for="inputField"></label>
+        <input id="inputField" class="form-control" type="text">
+      </div>
+      <button type="submit" id="subButton">Submit!</button>
+    </form>
+    <div id ='lowerDisplay' class='container'>
+      <div class='row'>
+        <div class='col-md-5'>
+          <div class="card"x>
+            <div class="card-body" id="progressColor">
+              <h3 class="card-title" id="progressBox">Prompt #</h3>
+              <div class='card-text'>
+                <p id="progress"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-5'>
+          <div class='card'>
+            <div class='card-body' id="timerColor">
+              <h3 class='card-title'>Timer</h3>
+              <div class='card-text'>
+                <p id='seconds'></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='start' class ="modal">
+      <div class="modal-content">
+      <div id="instruct">
+        <h1>Instructions</h1>
+        <br>
+        Match the prompt and press enter/return to move the the next prompt.  Complete all prompts to end the game.
+      </div>
+      <div class="modal-header">
+        <h2 class="modal-title">Select difficulty level:</h2>
+      </div>
+      <form id='radio' class='form-group'>
+        <div>
+          <label for='diff-0'>Warm-up</label>
+          <input id='diff-0' type='radio' value='0' name='diff' checked>
+        </div>
+        <div>
+          <label for='diff-1'>Miscellaneous</label>
+          <input id='diff-1' type='radio' value='1' name='diff'>
+        </div>
+        <div>
+          <label for='diff-2'>Symbols and Brackets</label>
+          <input id='diff-2' type='radio' value='2' name='diff'>
+        </div>
+        <div>
+          <label for='diff-3'>Functions</label>
+          <input id='diff-3' type='radio' value='3' name='diff'>
+        </div>
+        <div>
+          <label for='diff-4'>Emmet</label>
+          <input id='diff-4' type='radio' value='4' name='diff'>
+        </div>
+        <div>
+          <label for='diff-5'>Ampersandstravaganza</label>
+          <input id='diff-5' type='radio' value='5' name='diff'>
+        </div>
+        <div>
+          <label for='diff-6'>Greek chars</label>
+          <input id='diff-6' type='radio' value='6' name='diff'>
+        </div>
+        <div>
+          <label for='diff-7'>JavaScript Reserved Keywords</label>
+          <input id='diff-7' type='radio' value='7' name='diff'>
+        </div>
+        <div>
+          <label for='diff-8'>Escape \Sequences</label>
+          <input id='diff-8' type='radio' value='8' name='diff'>
+        </div>
+        <button type='submit' id='radio-form' class="btn btn-info btn-lg">Start Game</button>
+      </form>
+    </div>
+      </form>
+    </div>
+  </div>
+  <div id ='gameOver' class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Game Over</h1>
+      </div>
+      <div id ='gameScore' class='modal-body'>
+
+      </div>
+      <input type="button" value="Refresh Page" onClick="location.href=location.href"></input>
+    </div>
+  </div>
+  <div id="promptTable" class="container">
+    <form id="promptForm">
+      <label for="userPrompt">Add your own prompts</label>
+      <input id="userPrompt" type="text" placeholder="Enter prompt here" required>
+      <button type="submit" class="addPrompt" for="userPrompt">Add Prompt</label>
+    </form>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
+
