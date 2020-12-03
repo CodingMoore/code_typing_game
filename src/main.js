@@ -5,10 +5,6 @@ import './css/styles.css';
 import { Complete } from './js/mode-complete.js';
 import { validater } from './js/validate-char.js';
 
-function playAudio() {
-  return document.querySelector("#soundPass").play();
-}
-
 function blink_text() {
   $(".blinker").fadeOut(150);
   $(".blinker").fadeIn(300);
@@ -27,25 +23,20 @@ $(document).ready(function() {
     event.preventDefault();
     let difficulty = $('input:radio[name=diff]:checked').val();
     let game = new Complete;
-    game = Complete.newGameInstance(0); // this adds a key-value pair to the game instance AND ups it by one each time called
-    // $("#inputField").focus();
+    game = Complete.newGameInstance(0);
     gameStart(game, difficulty);
   });
   function gameStart(game, difficulty) {
     $('#seconds').html(`${game.time.minutes}:${game.time.seconds}`);
-    // $('#minutes').html(`<span> </span>`);
     Timer();
     $("#visual").html("<span class='blinker'>|</span>");
     $("#inputField").val("");
     $("#start").hide();
-    $("#promptOut").text(game.prompt[difficulty][0]);
+    $("#promptOut").html(game.prompt[difficulty][0] + "<span class='blankSpace'>|</span");
     $("#progress").text(`1/${game.prompt[difficulty].length}`);
-    // console.log(game.prompt[difficulty][game.turnsTaken - 1]);
+    
     $("#inputField").on("input", function() {
-      // console.log(`game.prompt value: ${game.prompt}`);
-      // console.log(`difficulty value: ${difficulty}`);
-      // console.log(`turns taken: ${game.turnsTaken - 1}`);
-      // console.log(`checker used very soon: ${game.prompt[difficulty][game.turnsTaken - 1]}`);
+      
       $("#visual").html(validater($("#inputField").val(), game.prompt[difficulty][game.turnsTaken -1]));
     });
     $("#input").submit(function(event) {
@@ -54,20 +45,12 @@ $(document).ready(function() {
       if (game.checkAnswer(difficulty) === "correct") {
         game.turnsTaken ++;
         if (game.turnsTaken <= game.prompt[difficulty].length) {
-          // $("#correct").show();
           $("#progress").css("background-color", "green");
           $("#inputField").val("");
-          $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
+          $("#promptOut").html(game.prompt[difficulty][game.turnsTaken - 1] + "<span class='blankSpace'>|</span");
           $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
           $("#visual").html("<span class='blinker'>|</span>");
-          playAudio().then(function() {
-            console.log("soundPass has been played")
-          });
-          // var audio = new Audio('audio_file.mp3');
-          // audio.play();
-          // $("#soundPass").play();
           setTimeout(function() {
-            // $("#correct").hide();
             $("#progress").css("background-color", "transparent");
           } , 200);
         } else {
@@ -78,11 +61,9 @@ $(document).ready(function() {
           $('#gameOver').show();
         }
       } else if (game.checkAnswer(difficulty) === 'incorrect') {
-        // $("#incorrect").show();
         $("#progress").css("background-color", "red");
         game.userInput.pop();
         setTimeout(function() {
-          // $("#incorrect").hide();
           $("#progress").css("background-color", "transparent");
         } , 200);
       }

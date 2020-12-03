@@ -91,7 +91,7 @@ RMGit.it@gmail.com
 
 GPLv3
 
-Copyright © 2020 Randel Moore
+Copyright © 2020 Randel Moore, Nick Hennessy, Tyler Sinks, Patrick Osten
 
 ## **Project Status**
 _Achieved_
@@ -103,7 +103,3 @@ _In Progress_
 - adding sound effects
 - adding placeholders for ads
 - ability to play multiple games with a cumulative score tracked
-Co-authored-by: Randel Moore <RMGit.it@gmail.com>
-Co-authored-by: Patrick Osten <posten.coding@gmail.com>
-Co-authored-by: Tyler Sinks <tyler.sinks@gmail.com>
-Co-authored-by: Nick Hennessy <njhnny@gmail.com>"

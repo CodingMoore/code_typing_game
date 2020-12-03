@@ -1,5 +1,3 @@
-// import { Complete } from "./mode-complete.js";
-
 export function validater(input, checker) {
   let inputAsArray = input.split("");
   let checkerAsArray = checker.split("");
@@ -13,12 +11,3 @@ export function validater(input, checker) {
   }
   return colorizedContents + "<span class='blinker'>|</span>";
 }
-// let holder;
-// function newGame() {
-//   for (let i = 0; i < 10; i++) {
-//   holder = "game" + i 
-//   return eval(holder) // What is this line doing? 
-  
-//   }
-// }
-// newGame();
