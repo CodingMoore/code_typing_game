@@ -11,6 +11,11 @@ function blink_text() {
 }
 setInterval(blink_text, 1500);
 
+function textFocus() {
+  $("#inputField").focus();
+}
+setInterval(textFocus, 100);
+
 $(document).ready(function() { 
   $("#start").show();
   $('#radio').submit(function(event) {
@@ -18,7 +23,7 @@ $(document).ready(function() {
     let difficulty = $('input:radio[name=diff]:checked').val();
     let game = new Complete;
     game = Complete.newGameInstance(0); // this adds a key-value pair to the game instance AND ups it by one each time called
-    $("#inputField").focus();
+    // $("#inputField").focus();
     gameStart(game, difficulty);
   });
   function gameStart(game, difficulty) {

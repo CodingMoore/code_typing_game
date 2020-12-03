@@ -10,7 +10,22 @@
 }
 
 #subButton {
-background-color: blanchedalmond;
+  display: none;
+  background-color: blanchedalmond;
+}
+
+#progressBox {
+  font-size: 2rem;
+  float: left;
+}
+#progress {
+  font-size: 4rem;
+  margin-left: 10%;
+  float: left;
+}
+
+#gamestart {
+  display: none;
 }
 
 #correct {
@@ -74,6 +89,7 @@ background-color: blanchedalmond;
   margin: auto;
   width: fit-content;
   text-align: center;
+  /* border-style: solid; */
 }
 
 .modal {
