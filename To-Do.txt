@@ -12,3 +12,8 @@
 12) Game Over screen
 13) figure out how to host this project(heroku? gh-pages?)
 14) README!!!!!!
+15) prevent output box moving when answer is longer than prompt
+16) countdown timer to game Start
+17) adjust correct/incorrect indicators
+18) audio que for correct/incorrect answer
+19) set focus to pop up window buttons when starting ending game.

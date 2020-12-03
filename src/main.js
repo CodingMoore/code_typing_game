@@ -11,6 +11,11 @@ function blink_text() {
 }
 setInterval(blink_text, 1500);
 
+function textFocus() {
+  $("#inputField").focus();
+}
+setInterval(textFocus, 100);
+
 $(document).ready(function() { 
   $("#start").show();
   $('#radio').submit(function(event) {
@@ -18,7 +23,7 @@ $(document).ready(function() {
     let difficulty = $('input:radio[name=diff]:checked').val();
     let game = new Complete;
     game = Complete.newGameInstance(0); // this adds a key-value pair to the game instance AND ups it by one each time called
-    $("#inputField").focus();
+    // $("#inputField").focus();
     gameStart(game, difficulty);
   });
   function gameStart(game, difficulty) {
@@ -41,25 +46,29 @@ $(document).ready(function() {
       game.userInput.push($("#inputField").val());
       if (game.checkAnswer(difficulty) === "correct") {
         game.turnsTaken ++;
-        if (game.turnsTaken < game.prompt[difficulty].length) {
-          $("#correct").show();
+        if (game.turnsTaken <= game.prompt[difficulty].length) {
+          // $("#correct").show();
+          $("#progress").css("background-color", "green");
           $("#inputField").val("");
+          $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
+          $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
+          $("#visual").html("<span class='blinker'>|</span>");
           setTimeout(function() {
-            $("#correct").hide();
-            $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
-            $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
-            $("#visual").html("<span class='blinker'>|</span>");
-          } , 1000);
+            // $("#correct").hide();
+            $("#progress").css("background-color", "transparent");
+          } , 200);
         } else {
           game.resetPlayer();
           $('#gameOver').show();
         }
       } else if (game.checkAnswer(difficulty) === 'incorrect') {
-        $("#incorrect").show();
+        // $("#incorrect").show();
+        $("#progress").css("background-color", "red");
         game.userInput.pop();
         setTimeout(function() {
-          $("#incorrect").hide();
-        } , 1000);
+          // $("#incorrect").hide();
+          $("#progress").css("background-color", "transparent");
+        } , 200);
       }
     });
     $("#promptForm").submit(function(e) {

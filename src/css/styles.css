@@ -7,10 +7,28 @@
   font-family: monospace;
   font-size: 50pt;
   font-weight: bold;
+  margin-bottom: 40pt;
 }
 
 #subButton {
-background-color: blanchedalmond;
+  display: none;
+  background-color: blanchedalmond;
+}
+
+#progressBox {
+  font-size: 2rem;
+  float: left;
+}
+#progress {
+  font-size: 4rem;
+  margin-left: 10%;
+  float: left;
+  border-radius: 100%;
+  padding: 5%;
+}
+
+#gamestart {
+  display: none;
 }
 
 #correct {
@@ -57,23 +75,24 @@ background-color: blanchedalmond;
   font-size: 4rem;
 }
 
+#promptBox {
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+  border-style: solid;
+}
+
 #promptOut {
   font-size: 4rem;
   text-align: left;
-  /* border-style: solid; */
+  border-style: dotted;
 }
 
 #visual {
   font-size: 4rem;
   text-align: left;
-  /* border-style: solid; */
+  border-style: dashed;
 
-}
-
-#promptBox {
-  margin: auto;
-  width: fit-content;
-  text-align: center;
 }
 
 .modal {
