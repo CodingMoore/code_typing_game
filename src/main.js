@@ -62,7 +62,7 @@ $(document).ready(function() {
     $("#promptForm").submit(function(e) {
       e.preventDefault();
       game.addPrompt($("#userPrompt").val(), difficulty);
-      $('#progress').text(game.prompt[difficulty][game.turnsTaken - 1]);
+      $('#progress').text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
       $("#userPrompt").val("");
     });
     function Timer() {
