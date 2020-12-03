@@ -2,21 +2,21 @@ export class Complete {
   constructor() {
     this.userInput = [];
     this.prompt = [
-      [
+      [ // "Warm-up" (index: 0)
         "[",
         "{",
         "<",
         "/",
         "="
       ],
-      [
+      [ // "Miscellaneous" (index: 1)
         "function() {",
         "Array.prototype",
         "thisArray.push",
         "setTimeout(function(){},5000)",
         "return result"
       ],
-      [
+      [ // "Lots o' symbols 'n' brackets" (index: 2)
         "[",
         "{",
         "<",
@@ -28,7 +28,7 @@ export class Complete {
         "@keys,",
         "%",
         "!",
-        "` some text `,",
+        "` backticks! `,",
         "~",
         "*",
         "&emdash;",
@@ -39,11 +39,25 @@ export class Complete {
         "$()",
         "$(' ')",
         "${}",
+        "${evaluated}",
+      ],
+      [ // "Functions, callbacks, dot notation" (index: 3)
         "function()",
         "function",
-        "this.here",
+        "higher order function(callback(parameter) {const wizardry;}, callbackSecond() {})",
+        "this.here[i]",
         "VeryNested.Object.keys.instance.locator",
         "Some[more]bracket.and.dot[notation]",
+        "arrayOfEverything.subArray.difficulty.zero.7",
+        "function(el) { el => el * 2 };",
+        "function(with, two, or, more, arguments) {this.name = with};",
+        "function haberdasher() {const hat; return hat;}",
+        "function(callback(firstArgument) {const code;}, secondArgument)",
+        "callback",
+        "(){}",
+        "function Constructionist(name, partyAffiliation){this.name = name; this.partyAffiliation = chattyParty}"
+      ],
+      [ // "Emmet abbreviations and html" (index: 4)
         "<>",
         "()",
         "^",
@@ -57,7 +71,11 @@ export class Complete {
         "div>p+ul>5*li",
         "div>h2+3*p",
         "div>h3+p+ul>6*li",
-        "&amp;", // <-- Begin html named codes section
+        "div.container>div.jumbotron>h1+p.subtitle",
+        "div.container>div*2>ul>5*li"
+      ],
+      [ // "Ampersandstravaganza" (index: 5)
+        "&amp;",
         "&bull;",
         "&deg;",
         "&sdot;",
@@ -69,8 +87,10 @@ export class Complete {
         "&cent;",
         "&copy;",
         "&reg;",
-        "&trade;",
-        "&alpha;", // <-- Begin greek
+        "&trade;"
+      ],
+      [ // "FratMode" (index: 6)
+        "&alpha;",
         "&beta;",
         "&gamma;",
         "&lambda;",
@@ -84,10 +104,57 @@ export class Complete {
         "&Upsilon;",
         "&Chi;",
         "&Psi;",
-        "&Omega;",
+        "&Omega;"
+      ],
+      [ // "JavaScript keywords: all" (index: 7)
+        "break",
+        "case",
+        "catch",
+        "class",
+        "export",
+        "extends",
+        "finally",
+        "super",
+        "switch",
+        "try",
+        "const",
+        "continue",
+        "debugger",
+        "default",
+        "return",
+        "new",
+        "instanceof",
+        "function",
+        "for",
+        "in",
+        "yield",
+        "with",
+        "while",
+        "void",
+        "var [not best practice!]",
+        "else",
+        "do",
+        "delete",
+        "if",
+        "import",
+        "enum", // <-- begin "Future reserved keywords"
+        "implements",
+        "package",
+        "public",
+        "interface",
+        "private",
+        "static",
+        "let",
+        "protected",
+        "await",
+        "null"
+      ],
+      [ // "Escape sequences" (index: 8)
+        "\n",
+        "\r",
+        "\t"
       ]
-  
-  ];
+    ];
     this.turnsTaken = 1;
   }
   checkAnswer(difficulty) {

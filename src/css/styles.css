@@ -1,3 +1,14 @@
+#header {
+  background-color: rgb(67, 168, 168);
+  text-align: center;
+  padding-top: 20pt;
+  padding-bottom: 20pt;
+  border-radius: 20pt;
+  font-family: monospace;
+  font-size: 50pt;
+  font-weight: bold;
+}
+
 #subButton {
 background-color: blanchedalmond;
 }
@@ -19,6 +30,18 @@ background-color: blanchedalmond;
   text-align: center;
 }
 
+#inputField {
+  opacity: 0%;
+}
+
+#promptTable.container {
+  display: none;
+}
+
+.table {
+  display: none;
+}
+
 .single-char {
   font-size: 2rem;
 }
@@ -26,44 +49,63 @@ background-color: blanchedalmond;
 .incorrect {
   color: crimson;
   text-decoration: underline;
+  font-size: 4rem;
 }
 
 .correct {
   color: forestgreen;
+  font-size: 4rem;
 }
 
 #promptOut {
-  font-size: 2rem;
+  font-size: 4rem;
+  text-align: left;
+  /* border-style: solid; */
 }
 
 #visual {
-  font-size: 2rem;
+  font-size: 4rem;
+  text-align: left;
+  /* border-style: solid; */
+
 }
 
-.close {
-  color: black;
-  float: right;
-  font-weight: bold;
-}
-
-.close:hover, .close:focus {
-  color: red;
-  cursor: pointer;
+#promptBox {
+  margin: auto;
+  width: fit-content;
+  text-align: center;
 }
 
 .modal {
   position: fixed;
   z-index: 1;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.411);
+  background-color: rgba(191, 191, 191, 0.666);
+}
+
+.modal-title {
+  text-align: center;
+  margin: auto;
 }
 
 .modal-content {
   margin: 15%;
   padding: 20px;
-  width: 80%;
+  width: auto;
   animation-name: animatetop;
   animation-duration: .4s;
+  text-align: center;
+  display: block;
+  border-radius: 20pt;
+  box-shadow: 3px 3px;
+}
+
+.modal-content h1 {
+  font-family: monospace;
+}
+
+.modal-content h2 {
+  font-family: monospace;
 }
 
 @keyframes animatetop {

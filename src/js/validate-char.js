@@ -11,7 +11,7 @@ export function validater(input, checker) {
       colorizedContents += `<span class="single-char correct">${inputAsArray[i]}</span>`;
     }
   }
-  return colorizedContents;
+  return colorizedContents + "<span class='blinker'>|</span>";
 }
 // let holder;
 // function newGame() {
