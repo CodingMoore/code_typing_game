@@ -62,18 +62,26 @@ $(document).ready(function() {
     $("#promptForm").submit(function(e) {
       e.preventDefault();
       game.addPrompt($("#userPrompt").val(), difficulty);
+      $('#progress').text(game.prompt[difficulty][game.turnsTaken - 1]);
       $("#userPrompt").val("");
     });
     function Timer() {
       let timer = setInterval(function() {
+        let minutes = 0;
         game.time ++;
-        $('.test').html('<h3>' + `${game.time}` + '<h3>');
-        if (game.time === 10) {
-          clearInterval(timer);
+        $('.seconds').html(`<p>${game.time}</p>`);
+        if (game.time === 60) {
+          minutes ++;
+          $('.minutes').html(`<p>${minutes}</p>`);
+        } else {
+          if (game.time === 60) {
+            clearInterval(timer);
+          }
         }
         console.log('run');
       }, 1000);
     }
+
     $("#gamestart").click(function() {
         Timer();
     });

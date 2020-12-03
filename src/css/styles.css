@@ -32,6 +32,12 @@ background-color: blanchedalmond;
   color: forestgreen;
 }
 
+#promptTable {
+  width: 300px;
+  height: auto;
+  float: right;
+}
+
 #promptOut {
   font-size: 2rem;
 }
@@ -58,4 +64,10 @@ background-color: blanchedalmond;
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
+}
+
+#timeBox {
+  width: 200px;
+  height: 200px;
+  float: right;
 }
