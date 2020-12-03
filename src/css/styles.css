@@ -7,6 +7,7 @@
   font-family: monospace;
   font-size: 50pt;
   font-weight: bold;
+  margin-bottom: 40pt;
 }
 
 #subButton {
@@ -72,24 +73,24 @@
   font-size: 4rem;
 }
 
+#promptBox {
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+  border-style: solid;
+}
+
 #promptOut {
   font-size: 4rem;
   text-align: left;
-  /* border-style: solid; */
+  border-style: dotted;
 }
 
 #visual {
   font-size: 4rem;
   text-align: left;
-  /* border-style: solid; */
+  border-style: dashed;
 
-}
-
-#promptBox {
-  margin: auto;
-  width: fit-content;
-  text-align: center;
-  /* border-style: solid; */
 }
 
 .modal {

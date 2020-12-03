@@ -47,10 +47,12 @@ $(document).ready(function() {
       if (game.checkAnswer(difficulty) === "correct") {
         game.turnsTaken ++;
         if (game.turnsTaken < game.prompt[difficulty].length) {
-          $("#correct").show();
+          // $("#correct").show();
+          $("#progress").css("background-color", "green");
           $("#inputField").val("");
           setTimeout(function() {
-            $("#correct").hide();
+            // $("#correct").hide();
+            $("#progress").css("background-color", "transparent");
             $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
             $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
             $("#visual").html("<span class='blinker'>|</span>");
@@ -60,10 +62,12 @@ $(document).ready(function() {
           $('#gameOver').show();
         }
       } else if (game.checkAnswer(difficulty) === 'incorrect') {
-        $("#incorrect").show();
+        // $("#incorrect").show();
+        $("#progress").css("background-color", "red");
         game.userInput.pop();
         setTimeout(function() {
-          $("#incorrect").hide();
+          // $("#incorrect").hide();
+          $("#progress").css("background-color", "transparent");
         } , 1000);
       }
     });

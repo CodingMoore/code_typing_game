@@ -14,3 +14,5 @@
 14) README!!!!!!
 15) prevent output box moving when answer is longer than prompt
 16) countdown timer to game Start
+17) adjust correct/incorrect indicators
+18) audio que for correct/incorrect answer
