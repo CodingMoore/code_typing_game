@@ -88,7 +88,7 @@ $(document).ready(function() {
       for (let i = 0; i < game.prompt[difficulty].length; i++) {
         num += game.prompt[difficulty][i].length;
       }
-      let score = `${num} Characters / ${game.time} Seconds`;
+      let score = `${num} Characters / ${game.time.minutes} Minutes and ${game.time.seconds} Seconds`;
       return score;
     }
   }
