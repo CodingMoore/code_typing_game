@@ -5,6 +5,12 @@ import './css/styles.css';
 import { Complete } from './js/mode-complete.js';
 import { validater } from './js/validate-char.js';
 
+function blink_text() {
+  $(".blinker").fadeOut(150);
+  $(".blinker").fadeIn(300);
+}
+setInterval(blink_text, 1500);
+
 $(document).ready(function() { 
   $("#start").show();
   $('#radio').submit(function(event) {
@@ -17,7 +23,7 @@ $(document).ready(function() {
   });
   function gameStart(game, difficulty) {
     
-    $("#visual").text("");
+    $("#visual").html("<span class='blinker'>|</span>");
     $("#inputField").val("");
     $("#start").hide();
     $("#promptOut").text(game.prompt[difficulty][0]);
@@ -42,7 +48,7 @@ $(document).ready(function() {
             $("#correct").hide();
             $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
             $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
-            $("#visual").html("");
+            $("#visual").html("<span class='blinker'>|</span>");
           } , 1000);
         } else {
           game.resetPlayer();

@@ -5,13 +5,12 @@
 </head>
 <body>
   <div class="container">
-    <h1 id="header">Code Typing Game</h1>
-    <div id="instruct">
-      Match the prompt and press submit.
-    </div>
+    <h1 id="header">Code Typing Game<span class="blinker">_</span></h1>
     <div id="promptBox">
-      <p id="promptText">Prompt!</p>
-      <span id="promptOut"></span>
+      <!-- <p id="promptText">Prompt!</p> -->
+      <div id="promptOut"></div>
+      <div id="visual">
+      </div>
     </div>
     <div id="correct">
       <p>You can type!</p>
@@ -19,11 +18,10 @@
     <div id="incorrect">
       <p>Not what we were looking for.</p>
     </div>
-    <div id="visual">
-    </div>
+    
     <form id="input">
       <div class="form-group">
-        <label for="inputField">Input</label>
+        <label for="inputField"></label>
         <input id="inputField" class="form-control" type="text">
       </div>
       <button type="submit" id="subButton">Submit!</button>
@@ -51,19 +49,24 @@
   </div>
   <div id='start' class ="modal">
     <div class="modal-content">
+      <div id="instruct">
+        <h1>Instructions</h1>
+        <br>
+        Match the prompt and press submit.
+      </div>
       <div class="modal-header">
-        <h1 class="modal-title">Select difficulty level:</h1>
+        <h2 class="modal-title">Select difficulty level:</h2>
       </div>
       <form id='radio' class='form-group'>
         <div>
-          <label for='diff-1'>Flavor 1</label>
-          <input id ='diff-1' type='radio' value='0' name='diff'>
+          <label for='diff-1'>Easy</label>
+          <input id ='diff-1' type='radio' value='0' name='diff'checked>
         </div>
         <div>
-          <label for='diff-2'>Flavor 2</label>
+          <label for='diff-2'>Hard</label>
           <input id = 'diff-2' type='radio' value='1' name='diff'>
         </div>
-        <button type='submit' id='radio-form'>Choose Game</button>
+        <button type='submit' id='radio-form'>Start Game</button>
       </form>
     </div>
   </div>
