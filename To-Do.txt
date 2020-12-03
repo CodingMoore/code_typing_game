@@ -16,3 +16,4 @@
 16) countdown timer to game Start
 17) adjust correct/incorrect indicators
 18) audio que for correct/incorrect answer
+19) set focus to pop up window buttons when starting ending game.
