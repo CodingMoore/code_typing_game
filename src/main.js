@@ -5,6 +5,10 @@ import './css/styles.css';
 import { Complete } from './js/mode-complete.js';
 import { validater } from './js/validate-char.js';
 
+function playAudio() {
+  return document.querySelector("#soundPass").play();
+}
+
 function blink_text() {
   $(".blinker").fadeOut(150);
   $(".blinker").fadeIn(300);
@@ -14,11 +18,12 @@ setInterval(blink_text, 1500);
 function textFocus() {
   $("#inputField").focus();
 }
-setInterval(textFocus, 100);
 
 $(document).ready(function() { 
+  $("#radio-form").focus();
   $("#start").show();
   $('#radio').submit(function(event) {
+    setInterval(textFocus, 100);
     event.preventDefault();
     let difficulty = $('input:radio[name=diff]:checked').val();
     let game = new Complete;
@@ -27,8 +32,8 @@ $(document).ready(function() {
     gameStart(game, difficulty);
   });
   function gameStart(game, difficulty) {
-    $('.seconds').html(`<p>${game.time.seconds}</p>`);
-    $('.minutes').html(`<p>${game.time.minutes}: </p>`);
+    $('#seconds').html(`${game.time.minutes}:${game.time.seconds}`);
+    // $('#minutes').html(`<span> </span>`);
     Timer();
     $("#visual").html("<span class='blinker'>|</span>");
     $("#inputField").val("");
@@ -55,6 +60,12 @@ $(document).ready(function() {
           $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
           $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
           $("#visual").html("<span class='blinker'>|</span>");
+          playAudio().then(function() {
+            console.log("soundPass has been played")
+          });
+          // var audio = new Audio('audio_file.mp3');
+          // audio.play();
+          // $("#soundPass").play();
           setTimeout(function() {
             // $("#correct").hide();
             $("#progress").css("background-color", "transparent");
@@ -85,10 +96,10 @@ $(document).ready(function() {
     function Timer() {
       let timer = setInterval(function() {
         game.time.seconds ++;
-        $('.seconds').html(`<p>${game.time.seconds}</p>`);
+        $('#seconds').html(`${game.time.minutes}:${game.time.seconds}`);
         if (game.time.seconds === 60) {
           game.time.minutes ++;
-          $('.minutes').html(`<p>${game.time.minutes}: </p>`);
+          $('#seconds').html(`${game.time.minutes}:${game.time.seconds}`);
           game.time.seconds = 0;
           clearInterval(timer);
           Timer();
@@ -96,16 +107,12 @@ $(document).ready(function() {
       }, 1000);
     }
 
-    $("#gamestart").click(function() {
-      Timer();
-    });
-
     function showScore() {
       let num = 0;
       for (let i = 0; i < game.prompt[difficulty].length; i++) {
         num += game.prompt[difficulty][i].length;
       }
-      let score = `${num} Characters / ${game.time.minutes} Minutes and ${game.time.seconds} Seconds`;
+      let score =  Math.floor(num / (game.time.minutes + (game.time.seconds / 60))) + " Characters / minute";
       return score;
     }
   }
