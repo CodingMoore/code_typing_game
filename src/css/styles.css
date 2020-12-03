@@ -27,6 +27,19 @@
   padding: 5%;
 }
 
+.minutes, .seconds {
+  float: right;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#timeBox {
+  margin-left: 10%;
+  float: left;
+  border-radius: 100%;
+  padding: 5%;
+}
+
 #gamestart {
   display: none;
 }
@@ -130,4 +143,10 @@
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
+}
+
+#timeBox {
+  width: 200px;
+  height: 200px;
+  float: right;
 }

@@ -27,7 +27,9 @@ $(document).ready(function() {
     gameStart(game, difficulty);
   });
   function gameStart(game, difficulty) {
-    
+    $('.seconds').html(`<p>${game.time.seconds}</p>`);
+    $('.minutes').html(`<p>${game.time.minutes}: </p>`);
+    Timer();
     $("#visual").html("<span class='blinker'>|</span>");
     $("#inputField").val("");
     $("#start").hide();
@@ -58,6 +60,9 @@ $(document).ready(function() {
             $("#progress").css("background-color", "transparent");
           } , 200);
         } else {
+          let score = showScore();
+          console.log(score);
+          $('#gameScore').html(`<span>${score}</span>`);
           game.resetPlayer();
           $('#gameOver').show();
         }
@@ -74,16 +79,34 @@ $(document).ready(function() {
     $("#promptForm").submit(function(e) {
       e.preventDefault();
       game.addPrompt($("#userPrompt").val(), difficulty);
+      $('#progress').text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
       $("#userPrompt").val("");
     });
-  }
-  function Timer() {
-    setTimeout(function() {
-    }, 3000);
-  }
+    function Timer() {
+      let timer = setInterval(function() {
+        game.time.seconds ++;
+        $('.seconds').html(`<p>${game.time.seconds}</p>`);
+        if (game.time.seconds === 60) {
+          game.time.minutes ++;
+          $('.minutes').html(`<p>${game.time.minutes}: </p>`);
+          game.time.seconds = 0;
+          clearInterval(timer);
+          Timer();
+        }
+      }, 1000);
+    }
 
-  $("#gamestart").click(function() {
-    Timer();
-  });
+    $("#gamestart").click(function() {
+      Timer();
+    });
+
+    function showScore() {
+      let num = 0;
+      for (let i = 0; i < game.prompt[difficulty].length; i++) {
+        num += game.prompt[difficulty][i].length;
+      }
+      let score = `${num} Characters / ${game.time.minutes} Minutes and ${game.time.seconds} Seconds`;
+      return score;
+    }
+  }
 });
-

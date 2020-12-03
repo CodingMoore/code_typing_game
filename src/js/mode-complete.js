@@ -1,5 +1,9 @@
 export class Complete {
   constructor() {
+    this.time = {
+      seconds:0,
+      minutes:0,
+    };
     this.userInput = [];
     this.prompt = [
       [ // "Warm-up" (index: 0)
@@ -192,9 +196,6 @@ export class Complete {
       "setTimeout(function(){},5000)",
       "return result"
     ]];
-  }
-  addPrompt(input) {
-    this.prompt1.push(input);
   }
 }
 
