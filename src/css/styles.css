@@ -83,19 +83,19 @@
   margin: auto;
   width: fit-content;
   text-align: center;
-  border-style: solid;
+  /* border-style: solid; */
 }
 
 #promptOut {
   font-size: 4rem;
   text-align: left;
-  border-style: dotted;
+  /* border-style: dotted; */
 }
 
 #visual {
   font-size: 4rem;
   text-align: left;
-  border-style: dashed;
+  /* border-style: dashed; */
 }
 
 #lowerDisplay {
