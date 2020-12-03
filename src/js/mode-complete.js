@@ -1,6 +1,9 @@
 export class Complete {
   constructor() {
-    this.time = 0
+    this.time = {
+      seconds:0,
+      minutes:0,
+    };
     this.userInput = [];
     this.prompt = [
       [

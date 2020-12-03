@@ -67,24 +67,22 @@ $(document).ready(function() {
     });
     function Timer() {
       let timer = setInterval(function() {
-        let minutes = 0;
-        game.time ++;
-        $('.seconds').html(`<p>${game.time}</p>`);
-        if (game.time === 60) {
-          minutes ++;
-          $('.minutes').html(`<p>${minutes}</p>`);
-        } else {
-          if (game.time === 60) {
-            clearInterval(timer);
-          }
+        game.time.seconds ++;
+        $('.seconds').html(`<p>${game.time.seconds}</p>`);
+        if (game.time.seconds === 60) {
+          game.time.minutes ++;
+          $('.minutes').html(`<p>${game.time.minutes}</p>`);
+          game.time.seconds = 0;
+          clearInterval(timer);
+          Timer();
         }
-        console.log('run');
       }, 1000);
     }
 
     $("#gamestart").click(function() {
-        Timer();
+      Timer();
     });
+
     function showScore() {
       let num = 0;
       for (let i = 0; i < game.prompt[difficulty].length; i++) {
