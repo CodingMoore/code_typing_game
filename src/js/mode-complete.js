@@ -1,5 +1,6 @@
 export class Complete {
   constructor() {
+    this.time = 0
     this.userInput = [];
     this.prompt = [
       [
@@ -125,9 +126,6 @@ export class Complete {
       "setTimeout(function(){},5000)",
       "return result"
     ]];
-  }
-  addPrompt(input) {
-    this.prompt1.push(input);
   }
 }
 

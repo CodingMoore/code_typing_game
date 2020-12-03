@@ -38,13 +38,16 @@ $(document).ready(function() {
         if (game.turnsTaken < game.prompt[difficulty].length) {
           $("#correct").show();
           $("#inputField").val("");
+          $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
           setTimeout(function() {
             $("#correct").hide();
-            $("#promptOut").text(game.prompt[difficulty][game.turnsTaken - 1]);
             $("#progress").text((game.turnsTaken) + "/" + game.prompt[difficulty].length);
             $("#visual").html("");
           } , 1000);
         } else {
+          let score = showScore();
+          console.log(score);
+          $('#gameScore').html(`<span>${score}</span>`);
           game.resetPlayer();
           $('#gameOver').show();
         }
@@ -61,14 +64,26 @@ $(document).ready(function() {
       game.addPrompt($("#userPrompt").val(), difficulty);
       $("#userPrompt").val("");
     });
+    function Timer() {
+      let timer = setInterval(function() {
+        game.time ++;
+        $('.test').html('<h3>' + `${game.time}` + '<h3>');
+        if (game.time === 10) {
+          clearInterval(timer);
+        }
+        console.log('run');
+      }, 1000);
+    }
+    $("#gamestart").click(function() {
+        Timer();
+    });
+    function showScore() {
+      let num = 0;
+      for (let i = 0; i < game.prompt[difficulty].length; i++) {
+        num += game.prompt[difficulty][i].length;
+      }
+      let score = `${num} Characters / ${game.time} Seconds`;
+      return score;
+    }
   }
-  function Timer() {
-    setTimeout(function() {
-    }, 3000);
-  }
-
-  $("#gamestart").click(function() {
-    Timer();
-  });
 });
-
