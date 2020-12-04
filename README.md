@@ -9,7 +9,7 @@ Want to type all those weird characters and coding-required brackets with greate
 |:-------------------:|:-------------------------------:|:------------------------------------------:|:---------------------------:|
 | your current prompt | **colorized** input as you type | progress through the selected prompt genre | minutes and seconds elapsed |
 ## **Required for Use**
-1. A web browser capable of HTML5
+1. A web browser capable of HTML5 (for best results, use the latest version of Chrome)
 2. A keyboard / text-entry device
 ## **Installation Instructions**
 **Option 1** (download zip file)
@@ -75,6 +75,7 @@ all the bolded "Planned Features" above, namely:
 - when entering a new prompt, any phrase that has '<' followed directly by more characters does not print properly to the DOM. '<' and '< something' appear without issue.
   - fixed 12.2.2020
 - blinking cursor will occasionally speed up
+- prompt and user input are not centered when using some versions of firefox.
 ## **Technology Used**
 * HTML
 * JavaScript
