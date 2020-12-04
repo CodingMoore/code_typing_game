@@ -55,13 +55,13 @@ $(document).ready(function() {
           } , 200);
         } else {
           let score = showScore();
-          console.log(score);
           $('#gameScore').html(`<span>${score}</span>`);
           game.resetPlayer();
           $('#gameOver').show();
         }
       } else if (game.checkAnswer(difficulty) === 'incorrect') {
         $("#progress").css("background-color", "red");
+        game.wrongAnswer.push(game.userInput);
         game.userInput.pop();
         setTimeout(function() {
           $("#progress").css("background-color", "transparent");

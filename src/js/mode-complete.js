@@ -5,6 +5,7 @@ export class Complete {
       minutes:0,
     };
     this.userInput = [];
+    this.wrongAnswer = [];
     this.prompt = [
       [ // "Warm-up" (index: 0)
         "[",
@@ -179,21 +180,26 @@ export class Complete {
     return newInstance;
   }
   resetPlayer() {
+    this.time = {
+      seconds:0,
+      minutes:0,
+    };
     this.turnsTaken = 1;
     this.userInput = [];
-    this.prompt = [[
-      "[",
-      "{",
-      "<",
-      "/",
-      "="
-    ],
-    [
-      "function() {",
-      "Array.prototype",
-      "thisArray.push",
-      "setTimeout(function(){},5000)",
-      "return result"
-    ]];
+    this.wrongAnswer = [];
+    // this.prompt = [[
+    //   "[",
+    //   "{",
+    //   "<",
+    //   "/",
+    //   "="
+    // ],
+    // [
+    //   "function() {",
+    //   "Array.prototype",
+    //   "thisArray.push",
+    //   "setTimeout(function(){},5000)",
+    //   "return result"
+    // ]];
   }
 }

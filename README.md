@@ -1,6 +1,7 @@
 # **code_typing_game**
-Begun: 2020-11-30.
-Most Recent Updates: 2020-12-03.
+Begun: 2020-11-30.<br>
+Most Recent Updates: 2020-12-04.<br>
+
 Creators: Nick Hennessy <njhnny@gmail.com>, Patrick Osten <posten.coding@gmail.com>, Randel Moore <RMGit.it@gmail.com>, Tyler Sinks <tyler.sinks@gmail.com>
 ## **Project Description**
 Want to type all those weird characters and coding-required brackets with greater speed and accuracy? This project has gameified this. Pit you and your keyboard skills against a timer.
@@ -11,6 +12,7 @@ Want to type all those weird characters and coding-required brackets with greate
 ## **Required for Use**
 1. A web browser capable of HTML5 (for best results, use the latest version of Chrome)
 2. A keyboard / text-entry device
+3. A mouse for menu navigation
 ## **Installation Instructions**
 **Option 1** (download zip file)
 1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/RMGit-it/code_typing_game
@@ -36,10 +38,8 @@ Want to type all those weird characters and coding-required brackets with greate
     <code>code .</code> and then hit return/enter.
 
 _The project should automatically launch using your default code editor._
-4) Using the two terminal commands shown just below, npm will install all required dependencies from the package.JSON folder, and build the program. To use these npm commands, make sure your present working directory is the root folder of the project in your console. Here are the commands to install and build the program:
-
-    <code>npm install</code>
-
+4) Using the two terminal commands shown just below, npm will install all required dependencies from the package.JSON folder, and build the program. To use these npm commands, make sure your present working directory is the root folder of the project in your console. Here are the commands to install and build the program:<br><br>
+    <code>npm install</code><br><br>
     <code>npm run build</code>
 
 5) Once the code is built, a "dist/" directory will be created in the root directory of the project.  Launch the "index.html" file found here, and it will open in your default web browser.

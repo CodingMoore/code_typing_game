@@ -1,3 +1,5 @@
+// import { Complete } from "./mode-complete.js";
+
 export function validater(input, checker) {
   let inputAsArray = input.split("");
   let checkerAsArray = checker.split("");
