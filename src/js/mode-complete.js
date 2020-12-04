@@ -79,7 +79,6 @@ export class Complete {
         "div.container>div*2>ul>5*li"
       ],
       [ // "Ampersandstravaganza" (index: 5)
-        "&amp;",
         "&bull;",
         "&deg;",
         "&sdot;",
