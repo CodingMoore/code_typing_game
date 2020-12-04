@@ -16,7 +16,7 @@ Want to type all those weird characters and coding-required brackets with greate
 ## **Installation Instructions**
 **Option 1** (live webpage)
 
-visit the following link to view a live version of this project.  For best results, please use an up to date version of the Chrome browser.
+Visit the following link to view a live version of this project.  For best results, please use an up to date version of the Chrome browser.
 
 https://rmgit-it.github.io/code_typing_game/dist/index.html
 
