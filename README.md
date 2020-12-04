@@ -14,7 +14,13 @@ Want to type all those weird characters and coding-required brackets with greate
 2. A keyboard / text-entry device
 3. A mouse for menu navigation
 ## **Installation Instructions**
-**Option 1** (download zip file)
+**Option 1** (live webpage)
+
+visit the following link to view a live version of this project.  For best results, please use an up to date version of the Chrome browser.
+
+https://rmgit-it.github.io/code_typing_game/dist/index.html
+
+**Option 2** (download zip file)
 1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/RMGit-it/code_typing_game
 2) Click the green "Code" button near the upper right corner of the screen.
 3) Select "Download Zip" from the dropdown menu that appears upon "Code" button click.
@@ -27,7 +33,7 @@ Want to type all those weird characters and coding-required brackets with greate
     <code>npm run build</code>
 
 7) Once the code is built, a "dist/" directory will be created in the root directory of the project.  Launch the "index.html" file found here and it should open with your default web browser.
-**Option 2** (via git console/terminal)
+**Option 3** (via git console/terminal)
 1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
 2) Type the following line of code into your terminal/console to automatically download the project to your current direcory and hit return/enter
 
