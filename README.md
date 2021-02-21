@@ -2,7 +2,7 @@
 Begun: 2020-11-30.<br>
 Most Recent Updates: 2020-12-04.<br>
 
-Creators: Nick Hennessy <njhnny@gmail.com>, Patrick Osten <posten.coding@gmail.com>, Randel Moore <RMGit.it@gmail.com>, Tyler Sinks <tyler.sinks@gmail.com>
+Creators: Nick Hennessy <njhnny@gmail.com>, Patrick Osten <posten.coding@gmail.com>, Randel Moore <CodingMoore@gmail.com>, Tyler Sinks <tyler.sinks@gmail.com>
 ## **Project Description**
 Want to type all those weird characters and coding-required brackets with greater speed and accuracy? This project has gameified this. Pit you and your keyboard skills against a timer.
 #### On screen, the features you will see:
@@ -18,10 +18,10 @@ Want to type all those weird characters and coding-required brackets with greate
 
 Visit the following link to view a live version of this project.  For best results, please use an up to date version of the Chrome browser.
 
-https://rmgit-it.github.io/code_typing_game/dist/index.html
+https://CodingMoore.github.io/code_typing_game/dist/index.html
 
 **Option 2** (download zip file)
-1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/RMGit-it/code_typing_game
+1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/CodingMoore/code_typing_game
 2) Click the green "Code" button near the upper right corner of the screen.
 3) Select "Download Zip" from the dropdown menu that appears upon "Code" button click.
 4) From within your Downloads folder (or bar along the bottom of your browser), right click the .zip file and extract(unzip) its contents.
@@ -37,7 +37,7 @@ https://rmgit-it.github.io/code_typing_game/dist/index.html
 1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
 2) Type the following line of code into your terminal/console to automatically download the project to your current direcory and hit return/enter
 
-    <code>git clone https://github.com/RMGit-it/code_typing_game</code><br>
+    <code>git clone https://github.com/CodingMoore/code_typing_game</code><br>
 
 3) To take a look at this repository's files, navigate to the root directory of the project in the terminal/console, and type
 
@@ -93,7 +93,7 @@ all the bolded "Planned Features" above, namely:
 ## **Authors and Contributors**
 Authored by: Randel Moore, Nick Hennessy, Tyler Sinks, Patrick Osten
 ## **Contact**
-RMGit.it@gmail.com
+CodingMoore@gmail.com
 ## **License**
 
 GPLv3
