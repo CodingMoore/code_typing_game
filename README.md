@@ -18,10 +18,10 @@ Want to type all those weird characters and coding-required brackets with greate
 
 Visit the following link to view a live version of this project.  For best results, please use an up to date version of the Chrome browser.
 
-https://rmgit-it.github.io/code_typing_game/dist/index.html
+https://codingmoore.github.io/code_typing_game/dist/index.html
 
 **Option 2** (download zip file)
-1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/RMGit-it/code_typing_game
+1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/sinkstyt/code_typing_game
 2) Click the green "Code" button near the upper right corner of the screen.
 3) Select "Download Zip" from the dropdown menu that appears upon "Code" button click.
 4) From within your Downloads folder (or bar along the bottom of your browser), right click the .zip file and extract(unzip) its contents.
@@ -37,11 +37,11 @@ https://rmgit-it.github.io/code_typing_game/dist/index.html
 1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
 2) Type the following line of code into your terminal/console to automatically download the project to your current direcory and hit return/enter
 
-    <code>git clone https://github.com/RMGit-it/code_typing_game</code><br>
+    <code>git clone https://github.com/sinkstyt/code_typing_game</code><br>
 
 3) To take a look at this repository's files, navigate to the root directory of the project in the terminal/console, and type
 
-    <code>code .</code> and then hit return/enter.
+    <code>code .</code> and then hit <kbd>return</kbd> / <kbd>enter</kbd>.
 
 _The project should automatically launch using your default code editor._
 4) Using the two terminal commands shown just below, npm will install all required dependencies from the package.JSON folder, and build the program. To use these npm commands, make sure your present working directory is the root folder of the project in your console. Here are the commands to install and build the program:<br><br>
